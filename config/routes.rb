@@ -5,6 +5,8 @@ Summerreading::Application.routes.draw do
   # first created -> highest priority.
   
   root :to => 'courses#index'
+  
+  match 'courses/:name/:id' => 'courses#show', :as => 'courses'
 
   # Sample of regular route:
   #   match 'products/:id' => 'catalog#view'

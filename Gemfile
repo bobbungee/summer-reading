@@ -20,6 +20,8 @@ end
 gem 'thin'
 gem 'jquery-rails'
 
+gem 'nokogiri'
+
 group :development do
   gem 'sqlite3'
 end
