@@ -17,6 +17,7 @@ group :assets do
   gem 'uglifier'
 end
 
+gem 'thin'
 gem 'jquery-rails'
 
 group :development do
