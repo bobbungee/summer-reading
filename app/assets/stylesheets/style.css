@@ -56,6 +56,51 @@ div.class a {
   text-decoration: inherit;
 }
 
+div.desc:hover {
+  background: inherit;
+}
+
+div.novels {
+  text-align: left;
+  font-family: 'Droid Serif', serif;
+  font-size: 0.9em;
+  line-height: 2em;
+  color: rgba(255,255,255,0.8);
+}
+
+div.novels ul {
+  list-style: none;
+}
+
+div.novels hr {
+  border: 1px solid rgba(0,0,0,0.1);
+}
+
+div.notes {
+  background: rgba(0,0,0,0.4);
+  border-radius: 5px;
+  padding: 5px;
+  font-size: 0.8em;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  box-shadow: 0px 2px 3px rgba(255,255,255,0.1);
+  /*display: none;*/
+}
+
+div.notes input {
+  width: 40px;
+  border: 3px solid rgba(0,0,0,0.9);
+}
+
+div.notes input:disabled {
+  background: rgba(255,255,255,0.6);
+}
+
+div.notes p {
+  display: inline;
+  margin: auto 20px auto 20px;
+}
+
 div#footer {
   margin-top: 30px;
   font-size: 0.6em;

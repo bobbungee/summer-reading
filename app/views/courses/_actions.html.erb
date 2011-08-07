@@ -1,0 +1,14 @@
+<%= form_tag do %>
+  <p>
+    <%= label_tag :page, 'Page:' %>
+    <%= text_field_tag :page, '', :disabled => active %>
+  </p>
+  <p>
+    <%= label_tag :read, 'Read?' %>
+    <% if active %>
+      <%= check_box_tag :page, '', :checked => 'checked' %>
+    <% else %>
+      <%= check_box_tag :page %>
+    <% end %>
+  </p>
+<% end %>
