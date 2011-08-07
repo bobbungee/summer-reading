@@ -6,12 +6,14 @@
     <div class="novels">
       <ul>
         <% for novel in category.novels %>
+        <div class="novel">
           <li><%= novel.name %></li>
           <div class="notes">
             <%= render 'actions', :active => true %>
           </div>
           
           <%= raw "<hr/>" if novel.id != category.novels[category.novels.count-1].id %>
+        </div>
         <% end %>
       </ul>
     </div>
