@@ -1,10 +1,14 @@
-<p id="notice"><%= notice %></p>
+<h1>Summer Reading List</h1>
 
-<p>
-  <b>Name:</b>
-  <%= @course.name %>
-</p>
-
-
-<%= link_to 'Edit', edit_course_path(@course) %> |
-<%= link_to 'Back', courses_path %>
+<div id="classes">
+  <% for category in @course.categories %>
+    <div class="class"><%= category.name %></div>
+    <div class="novel">
+      <ul>
+        <% for novel in category.novels %>
+          <li><%= novel.name %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+</div>

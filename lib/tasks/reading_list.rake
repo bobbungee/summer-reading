@@ -17,6 +17,7 @@ task :fetch_summer_reading => :environment do
   count = 0
   doc.css('.txt').each do |items|
     list = items.text.split("\r\n")
+    c = nil
     
     if !list[0].include?(':')
       c = courses[count].categories.build(:name => 'Default')
@@ -27,9 +28,13 @@ task :fetch_summer_reading => :environment do
       if list[times].include?(':')
         c = courses[count].categories.build(:name => list[times])
         c.save!
+      else
+        c.novels.build(:name => list[times])
+        c.save!
       end
     end
     
     count += 1
   end
+  
 end
