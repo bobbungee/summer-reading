@@ -1,15 +1,20 @@
 <h1>Summer Reading List</h1>
 
 <div id="classes">
+  <p><%= link_to'← All courses', courses_main_path, :class => 'all', :method => :post %></p>
   <% for category in @course.categories %>
     <div class="class desc"><%= category.name %></div>
     <div class="novels">
       <ul>
         <% for novel in category.novels %>
         <div class="novel">
-          <li><%= novel.name %></li>
+          <% if novel_info(novel.name)[:read] %>
+            <li style="text-decoration:line-through;"><%= novel.name %></li>
+          <% else %>
+            <li><%= novel.name %></li>
+          <% end %>
           <div class="notes">
-            <%= render 'actions', :active => true %>
+            <%= render 'actions', :name => novel.name, :page => novel_info(novel.name)[:page], :active => novel_info(novel.name)[:read] %>
           </div>
           
           <%= raw "<hr/>" if novel.id != category.novels[category.novels.count-1].id %>

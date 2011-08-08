@@ -32,6 +32,14 @@ div#classes {
   padding: 10px;
 }
 
+div#classes a.all {
+  margin: 0 auto;
+  font-family: 'Droid Serif', serif;
+  font-size: 0.8em;
+  text-decoration: none;
+  color: rgba(255,255,255,0.6);
+}
+
 div.class {
   padding: 6px;
   margin: 10px;

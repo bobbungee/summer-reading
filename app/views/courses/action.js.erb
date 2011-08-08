@@ -1,0 +1,10 @@
+var note = $("li:contains('<%= @name %>')").next('.notes')
+var input = $("input[type=text]", note);
+
+if ('<%= @read %>' == '1') {
+  input.attr('disabled', 'true');
+  $("li:contains('<%= @name %>')").css('text-decoration', 'line-through');
+} else {
+  input.removeAttr('disabled');
+  $("li:contains('<%= @name %>')").css('text-decoration', 'none');
+}

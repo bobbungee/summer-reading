@@ -1,5 +1,7 @@
 Summerreading::Application.routes.draw do
   resources :courses
+  post 'courses/action'
+  post 'courses/main'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

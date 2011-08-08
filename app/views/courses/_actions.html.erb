@@ -1,14 +1,15 @@
-<%= form_tag do %>
+<%= form_tag(courses_action_path, :remote => true) do %>
+  <%= hidden_field_tag :name, name %>
   <p>
     <%= label_tag :page, 'Page:' %>
-    <%= text_field_tag :page, '', :disabled => active %>
+    <%= text_field_tag :page, page, :disabled => active %>
   </p>
   <p>
     <%= label_tag :read, 'Read?' %>
     <% if active %>
-      <%= check_box_tag :page, '', :checked => 'checked' %>
+      <%= check_box_tag :read, '', :checked => 'checked' %>
     <% else %>
-      <%= check_box_tag :page %>
+      <%= check_box_tag :read %>
     <% end %>
   </p>
 <% end %>
